@@ -57,7 +57,7 @@ public class LogUtil {
         LoggerHelper.setPattern("arthas-cache", "%d{yyyy-MM-dd HH:mm:ss.SSS}%n%m%n");
 
         arthasLogger = LoggerFactory.getLogger("arthas");
-        arthasLogger.activateAppenderWithTimeAndSizeRolling("arthas", "arthas.log", "UTF-8", "100MB");
+        arthasLogger.activateAppenderWithTimeAndSizeRolling("arthas", "arthas.log", "UTF-8", "100MB", "yyyy-MM-dd", 3);
         arthasLogger.setLevel(Level.INFO);
         arthasLogger.setAdditivity(false);
 
